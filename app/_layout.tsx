@@ -1,4 +1,4 @@
-import TodosProvider from '@/contexts/TodoContext'
+import TodosProvider from '@/hooks/useTodos'
 import { useFonts } from 'expo-font'
 import { Stack } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
@@ -30,7 +30,6 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <Stack>
           <Stack.Screen name="index" options={{ headerShown: false }} />
-          <Stack.Screen name="[view_card]" options={{ headerShown: false }} getId={({ params }) => String(Date.now())} />
         </Stack>
       </SafeAreaProvider>
     </TodosProvider>
